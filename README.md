@@ -24,11 +24,21 @@ In this challenge, create a web API around the following resources: `Projects` a
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Mention two parts of Express that you learned about this week.
+- [X] Mention two parts of Express that you learned about this week.
 
-- [ ] Describe Middleware?
+1. Express is essentially is a type of Node.js module, being a light piece of framework.
+2. It can build out web applications and RESTful web services that work with JSON.
+
+- [X] Describe Middleware?
+
+Middleware is (like in front-end) an array of functions that get executed in the order they are introduced, and in the back-end, they can be split into 3 different types: 
+  1. Built-in: included with Express, but not added automatically
+  2. 3rd Party: There are thousands of 3rd party npm module options out there to use, which we import in using require()
+  3. Custom: Functions that we write ourselves, which always take in 3 parameters, that are specially designed to handle our tasks at hand
 
 - [ ] Describe a Resource?
+
+In creating a RESTful web API, everything is a resource! They are managed using HTTP methods
 
 - [ ] What can the API return to help clients know if a request was successful?
 
