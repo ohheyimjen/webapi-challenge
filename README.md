@@ -40,9 +40,13 @@ Middleware is (like in front-end) an array of functions that get executed in the
 
 In creating a RESTful web API, everything is a resource! They are managed using HTTP methods, can have multiple representations, and are accessible through unique URIs.
 
-- [ ] What can the API return to help clients know if a request was successful?
+- [X] What can the API return to help clients know if a request was successful?
 
-- [ ] How can we partition our application into sub-applications?
+A list of the data you're trying to access
+
+- [X] How can we partition our application into sub-applications?
+
+We can achieve this by breaking it down into different files. An efficient way to go about it, would be to use 'express routers' to make code more organized and easier to share.
 
 ## Project Setup
 
