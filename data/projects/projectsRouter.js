@@ -7,12 +7,14 @@ router.use(express.json());
 
 router.get('/', async (req, res) => {
   try {
-    const projects = await Projects.get(req.query);
+    const projects = await Projects.get();
     res.status(200).json(projects);
+    console.log(projects);
   } catch (error) {
     res.status(500).json({ error: 'Uh-oh! There was an error retrieving your projects' });
   }
 });
+
 
 router.get('/:id', async (req, res) => {
   try {

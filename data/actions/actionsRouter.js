@@ -7,8 +7,8 @@ router.use(express.json());
 
 router.get('/', async (req, res) => {
   try {
-    const actions = await Actions.get(req.query);
-    res.status(200).json(posts);
+    const actions = await Actions.get();
+    res.status(200).json(actions);
   } catch (error) {
     res.status(500).json({ error: 'Uh-oh! There was an error retrieving your actions'})
   }
