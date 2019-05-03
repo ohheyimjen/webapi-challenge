@@ -36,9 +36,9 @@ Middleware is (like in front-end) an array of functions that get executed in the
   2. 3rd Party: There are thousands of 3rd party npm module options out there to use, which we import in using require()
   3. Custom: Functions that we write ourselves, which always take in 3 parameters, that are specially designed to handle our tasks at hand
 
-- [ ] Describe a Resource?
+- [X] Describe a Resource?
 
-In creating a RESTful web API, everything is a resource! They are managed using HTTP methods
+In creating a RESTful web API, everything is a resource! They are managed using HTTP methods, can have multiple representations, and are accessible through unique URIs.
 
 - [ ] What can the API return to help clients know if a request was successful?
 
