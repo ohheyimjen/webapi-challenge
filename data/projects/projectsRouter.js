@@ -10,21 +10,23 @@ router.get('/', async (req, res) => {
     const projects = await Projects.get(req.query);
     res.status(200).json(projects);
   } catch (error) {
-    res.status(500).json({ error: 'Uh-oh! There was an error retrieving your projects' })
+    res.status(500).json({ error: 'Uh-oh! There was an error retrieving your projects' });
   }
-})
+});
 
 router.get('/:id', async (req, res) => {
   try {
+    const project = await Projects.findById(req.params.id);
+
     if(project) {
       res.status(200).json(project);
     } else {
       res.status(404).json({ message: 'Cannot find the project. Try another one.'})
     }
   } catch (error) {
-    res.status(500).json({ error: 'Uh-oh! There was an error retrieving your projects'})
+    res.status(500).json({ error: 'Uh-oh! There was an error retrieving your projects'});
   }
-})
+});
 
 router.delete('/:id', async (req, res) => {
   try {
@@ -39,12 +41,14 @@ router.delete('/:id', async (req, res) => {
       message: 'Bummer. Error removing the project',
     });
   }
-})
+});
 
-router.post('/', async (req, res) => {
+router.post('/id/projects', async (req, res) => {
+  const projectInfo = { ...req.body, project_id: req.params.id };
+
   try {
-    const project = await Projects.insert(req.body);
-    res.status(200).json(project)
+    const project = await Projects.addProject(messageInfo);
+    res.status(210).json(project)
   } catch (error) {
     res.status(500).json({
       message: 'Bummer. Error adding the project'
